@@ -1,0 +1,51 @@
+package kim;
+
+import java.util.*;
+
+public class nes {
+	public static void main(String[] args) {
+		Scanner tec = new Scanner(System.in);
+
+		int a, b;
+		int op;
+		do {
+			System.out.println("FIGURAS CON FOR");
+			System.out.println("Opcion 1: TRIANGULO");
+			System.out.println("Opcion 2: CUADRADO");
+			op = tec.nextInt();
+			switch (op) {
+
+			case 1:
+				System.out.println("Ingresa algo");
+				a = tec.nextInt();
+
+				 for(int i=0;i<a;i++) {
+					for (int j=1;j<a-i;j++) {
+						System.out.print(" ");
+					}
+					for (int k=1;k<2*i;k++) {
+						System.out.print("#");
+					}
+					System.out.println(" ");
+				}
+				 
+				break;
+				
+			case 2:
+				System.out.println("Ingresa algo");
+				b=tec.nextInt();
+				for (int i=1;i<b;i++) {
+					for (int k=1;k<b;k++) {
+						System.out.print("#");
+					}
+					System.out.println("#");
+				}
+				break;
+			default:
+				System.out.println("NO EXISTE ESA OPCION");
+				break;
+			}
+		} while (op < 3);
+	}
+
+}
